@@ -66,4 +66,28 @@ CREATE TABLE Hostessa (
     
 )
 
+DROP TABLE Pilot;
 
+CREATE TABLE Pilot (
+    hores_vol INTEGER (4)
+)
+
+DROP TABLE Passatger;
+
+CREATE TABLE Passatger (
+    passaport VARCHAR(20) NOT NULL,
+    nom VARCHAR(20) NOT NULL,
+    cognom VARCHAR(50) NOT NULL,
+    email VARCHAR(40) NOT NULL,
+    data_naixement YEAR,
+    genere CHAR(1)
+)
+
+DROP TABLE Vol;
+
+CREATE TABLE Vol (
+    codi VARCHAR(9) NOT NULL,
+    data YEAR NOT NULL,
+    durada MINUTS NOT NULL,
+    descripcio VARCHAR()
+)

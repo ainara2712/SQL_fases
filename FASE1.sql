@@ -29,7 +29,7 @@ CREATE TABLE Personal (
 
 DROP TABLE  IF EXISTS Hostessa;
 CREATE TABLE Hostessa (
-    num_empleat INTEGER,
+    num_empleat INTEGER
 );
 
 DROP TABLE IF EXISTS Pilot;
@@ -45,13 +45,13 @@ CREATE TABLE Avio (
     tipus VARCHAR(10) NOT NULL,
     fabricant VARCHAR(20) NOT NULL,
     any_fabricacio YEAR,
-    companyia 
+    companyia VARCHAR(40) NOT NULL
 );
 
 
 DROP TABLE IF EXISTS Passatger;
 CREATE TABLE Passatger (
-    passaport VARCHAR(20) NOT NULL,
+    passaport CHAR(20) NOT NULL,
     nom VARCHAR(20) NOT NULL,
     cognom VARCHAR(50),
     adreca VARCHAR(70),
@@ -81,7 +81,7 @@ CREATE TABLE Mostrador (
 DROP TABLE IF EXISTS Vol;
 CREATE TABLE Vol (
     codi VARCHAR(9) NOT NULL,
-    aeroport_vol CHAR(4) NOT NULL,
+    aeroport_desti CHAR(4) NOT NULL,
     data INTEGER NOT NULL, 
     durada INTEGER NOT NULL,
     aeroport_origen CHAR(4) NOT NULL,

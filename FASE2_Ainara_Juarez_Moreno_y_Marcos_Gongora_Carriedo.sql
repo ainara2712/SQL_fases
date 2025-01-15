@@ -65,4 +65,4 @@ ALTER TABLE passatger ADD CONSTRAINT pk_passatger PRIMARY KEY(passaport);
 ALTER TABLE volar ADD CONSTRAINT fk_volar_passatger FOREIGN KEY(passatger) REFERENCES passatger(passaport) ON DELETE RESTRICT ON UPDATE CASCADE;
 ALTER TABLE volar ADD CONSTRAINT fk_volar_vol FOREIGN KEY(vol) REFERENCES vol(codi) ON DELETE RESTRICT ON UPDATE CASCADE;
 ALTER TABLE volar ADD CONSTRAINT ch_volar_seient CHECK(seient >= 1 AND seient <= 200);
-ALTER TABLE volar ADD CONSTRAINT uq_volar_seient UNIQUE (seient);
+ALTER TABLE volar ADD CONSTRAINT uq_volar_vol_seient UNIQUE (vol,seient); 
